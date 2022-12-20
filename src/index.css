@@ -1,15 +1,59 @@
-@import-normalize; /* bring in normalize.css styles */
-
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  background: radial-gradient(
+    circle,
+    rgba(6, 163, 191, 1) 0%,
+    rgba(12, 78, 90, 1) 100%
+  );
+  /* background-image: url("https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148902184.jpg?w=1380&t=st=1671464946~exp=1671465546~hmac=682722f2ed00cc5e85e9f9a6ce0bcf0f2f8e37daa8e9492fa800664cf2d3a36f");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* https://www.8host.com/blog/stilizaciya-polosy-prokrutki-v-css/ */
+body::-webkit-scrollbar {
+  width: 10px; /* ширина всей полосы прокрутки */
+}
+
+body::-webkit-scrollbar-track {
+  background: #e9e9e9; /* цвет зоны отслеживания */
+  border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #1d92a4; /* цвет бегунка */
+  border-radius: 10px; /* округлось бегунка */
+  border: 1px solid #000000b9; /*отступ вокруг бегунка*/
+}
+
+
+.my-node-enter {
+  opacity: 0;
+}
+.my-node-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.my-node-exit {
+  opacity: 1;
+}
+.my-node-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
 }
