@@ -16,10 +16,9 @@ export const List = styled.ul`
     border-radius: 20px; /* округлось бегунка */
     border: 1px solid #000000b9; //отступ вокруг бегунка
   }
-
+max-height: 400px;
   transition: all 300ms ease-out;
   overflow-y: auto;
-  max-height: 420px;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-right: 3px;

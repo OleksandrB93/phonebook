@@ -27,8 +27,7 @@ export default function App() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-      },
+      transition: {},
     },
     hidden: { opacity: 0, z: -100 },
   };
@@ -40,8 +39,8 @@ export default function App() {
   return isRefreshing ? (
     <b>Refreshing user...</b>
   ) : (
-    <motion.div variants={listVAriatns} initial="hidden" animate="visible">
-      <AppContainer>
+    <AppContainer>
+      <motion.div variants={listVAriatns} initial="hidden" animate="visible">
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
@@ -74,7 +73,7 @@ export default function App() {
             />
           </Route>
         </Routes>
-      </AppContainer>
-    </motion.div>
+      </motion.div>
+    </AppContainer>
   );
 }
